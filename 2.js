@@ -1,20 +1,22 @@
+/*Write a program to take four numbers from the user and print the greater number of the four numbers. */
 const input = require("readline-sync");
-let N = input.questionInt("Enter the value:");
-let sum =0;
-let originalN= N;
-
-let R ;
-
-while (N>0){
-R = N%10;
-sum = sum*10+R;
-N = Math.floor( N/10);
-}
- if(originalN===sum)
+let a = input.questionInt("Enter the first value:");
+let b = input.questionInt("Enter the second value:");
+let c = input.questionInt("Enter the third value:");
+let d = input. questionInt("Enter the fourth value:");
+if(a>b && a>c && a>d)
 {
-
-    console.log(" This is  a palindrome ");
+    console.log("Greatest number is :",a);
 }
-else{
-    console.log(" This is not a palindrome ");
+else if(b>a && b>c && b>d)
+{
+    console.log("Greatest number is :",b)
+}
+else if (c>a && c>b && c>d)
+{
+    console.log("Greatest number is :",c)
+}
+else
+{
+    console.log( "Greatest number is :",d)
 }
